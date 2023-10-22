@@ -1,0 +1,7 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+# map neat URL to internal URL
+RewriteRule ^clubes/list/$   ClubesController.php?view=all [nc,qsa]
+RewriteRule ^clubes/list/([0-9]+)/$   ClubesController.php?view=single&id=$1 [nc,qsa]

@@ -25,24 +25,23 @@ class Clubes
 
     public function getAllClubes()
     {
-        $query = "SELECT id, nome, localidade FROM Clubes;";
+        $query = "SELECT * FROM Clubes;";
         return $query;
     }
+
+    public function jornadas()
+    {
+        //
+    }
 }
-echo "Inicio\n";
+/*
 $obj = new Clubes();
-//var_dump($obj->conn);
 $result = $obj->conn->query($obj->getAllClubes());
 
-
-
-  // output data of each row
   while($row = $result->fetch_assoc()) 
   {
     echo "id: " . $row["id"]. " - Nome: " . $row["nome"]. " " . $row["localidade"]. "\n";
   }
-
-
-echo "Fim";
+*/
 
 ?>

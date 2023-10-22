@@ -1,15 +1,15 @@
 <?php 
 
-class SimpleClube
+abstract class SimpleClube
 {
     private $httpVersion = "HTTP/1.1";
 
     public function setHttpHeaders($contentType, $statusCode)
     {
         $statusMessage = $this->getHttpStatusMessage($statusCode);
-
+        
         header($this->httpVersion . " " . $statusCode . " " . $statusMessage);
-        header("Content-Type:" . $contentType);
+        header("Content-Type: ".$contentType);
     }
 
     public function getHttpStatusMessage($statusCode)
